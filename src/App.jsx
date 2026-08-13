@@ -3,24 +3,17 @@ import "./App.css";
 
 const projects = [
   {
-    title: "Project Aurora",
+    title: "Speech",
     description:
-      "A modern web application focused on delivering a smooth and intuitive digital experience.",
-    tech: ["React", "JavaScript", "CSS"],
+      "An AI-powered productivity tool that processes recorded or uploaded audio and transforms important information into structured outputs such as presentations, flowcharts, summaries, and documentation — all available for download.",
+    tech: ["React", "AI", "Audio Processing", "APIs"],
     link: "#",
   },
   {
-    title: "AI Insight",
+    title: "Pokédex",
     description:
-      "An AI-powered project that transforms complex information into simple, actionable insights.",
-    tech: ["Python", "AI", "API"],
-    link: "#",
-  },
-  {
-    title: "DevTrack",
-    description:
-      "A productivity platform designed to help developers organize projects, goals and progress.",
-    tech: ["React", "Node.js", "MongoDB"],
+      "An interactive Pokédex that lets users explore Pokémon along with their stats, strengths, weaknesses, and other information through a clean and responsive interface.",
+    tech: ["React", "JavaScript", "API", "CSS"],
     link: "#",
   },
 ];
@@ -28,14 +21,19 @@ const projects = [
 const skills = [
   "Java",
   "JavaScript",
-  "React",
-  "Node.js",
+  "C",
   "Python",
   "HTML",
   "CSS",
+  "React",
+  "Tailwind CSS",
+  "Node.js",
+  "Machine Learning",
+  "AI APIs",
   "Git",
   "GitHub",
-  "AI / ML",
+  "Vite",
+  "VS Code",
 ];
 
 function App() {
@@ -53,7 +51,7 @@ function App() {
       {/* NAVBAR */}
       <nav className="navbar glass">
         <a href="#home" className="logo" onClick={closeMenu}>
-          X<span>.</span>
+          K<span>.</span>
         </a>
 
         <button
@@ -74,24 +72,25 @@ function App() {
         </div>
       </nav>
 
-      {/* HERO */}
       <main>
+        {/* HERO */}
         <section id="home" className="hero section">
           <div className="hero-content reveal">
             <p className="eyebrow">HELLO, I'M</p>
 
             <h1>
-              Xkaimr
+              K. Akshith
               <span className="gradient-text">.</span>
             </h1>
 
             <h2>
-              Developer <span>•</span> Builder <span>•</span> Problem Solver
+              Student Developer <span>•</span> Builder <span>•</span> AI/ML Explorer
             </h2>
 
             <p className="hero-description">
-              I build thoughtful digital experiences, explore emerging
-              technologies, and turn ideas into products that actually work.
+              I'm a student developer who enjoys turning ideas into working
+              products — from full-stack applications to AI-powered tools.
+              I learn by building, experimenting, and shipping.
             </p>
 
             <div className="hero-actions">
@@ -107,18 +106,14 @@ function App() {
 
             <div className="social-row">
               <a
-                href="https://github.com/"
+                href="https://github.com/xkaimr"
                 target="_blank"
                 rel="noreferrer"
               >
                 GitHub ↗
               </a>
 
-              <a
-                href="https://linkedin.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="#" onClick={(e) => e.preventDefault()}>
                 LinkedIn ↗
               </a>
             </div>
@@ -126,20 +121,22 @@ function App() {
 
           <div className="hero-card glass reveal delay-one">
             <div className="status-dot"></div>
-            <span>Currently building</span>
-            <strong>Something awesome.</strong>
+
+            <span>CURRENTLY BUILDING</span>
+
+            <strong>AI-powered developer projects.</strong>
 
             <div className="hero-card-line"></div>
 
             <div className="mini-stats">
               <div>
-                <strong>10+</strong>
-                <span>Skills</span>
+                <strong>02+</strong>
+                <span>Projects</span>
               </div>
 
               <div>
-                <strong>3+</strong>
-                <span>Projects</span>
+                <strong>02nd</strong>
+                <span>Year</span>
               </div>
 
               <div>
@@ -154,35 +151,45 @@ function App() {
         <section id="about" className="section">
           <div className="section-heading reveal">
             <p className="eyebrow">01 / ABOUT</p>
-            <h2>Building with <span>curiosity.</span></h2>
+            <h2>
+              Building with <span>curiosity.</span>
+            </h2>
           </div>
 
           <div className="about-grid">
             <div className="glass about-card reveal">
               <p>
-                I'm a Computer Science student and developer who enjoys
-                understanding how things work and then building them from
-                scratch.
+                I'm K. Akshith, a second-year student developer at KL
+                University who enjoys learning by building. My interests sit
+                at the intersection of software development, artificial
+                intelligence, and creative technology.
               </p>
 
               <p>
-                My interests span frontend development, backend systems,
-                artificial intelligence, and creative technology.
+                I've worked across frontend development, programming,
+                Git/GitHub, machine learning projects, and AI-powered
+                applications. I enjoy taking an idea from a rough concept to
+                something people can actually interact with.
               </p>
 
               <p>
-                I believe good software should not only function well — it
-                should feel good to use.
+                For me, development isn't just about writing code. It's about
+                understanding the problem, figuring out how the pieces fit
+                together, and actually shipping the result.
               </p>
             </div>
 
             <div className="glass quote-card reveal delay-one">
               <span className="quote-mark">“</span>
+
               <p>
                 Turning ideas into interfaces, problems into systems, and
                 curiosity into things people can actually use.
               </p>
-              <span className="quote-line">— My approach to building</span>
+
+              <span className="quote-line">
+                — My approach to building
+              </span>
             </div>
           </div>
         </section>
@@ -191,7 +198,9 @@ function App() {
         <section id="skills" className="section">
           <div className="section-heading reveal">
             <p className="eyebrow">02 / SKILLS</p>
-            <h2>Tools I <span>build with.</span></h2>
+            <h2>
+              Tools I <span>build with.</span>
+            </h2>
           </div>
 
           <div className="skills-grid">
@@ -204,6 +213,7 @@ function App() {
                 <span className="skill-number">
                   {String(index + 1).padStart(2, "0")}
                 </span>
+
                 <span>{skill}</span>
               </div>
             ))}
@@ -214,7 +224,9 @@ function App() {
         <section id="projects" className="section">
           <div className="section-heading reveal">
             <p className="eyebrow">03 / PROJECTS</p>
-            <h2>Things I've <span>built.</span></h2>
+            <h2>
+              Things I've <span>built.</span>
+            </h2>
           </div>
 
           <div className="projects-grid">
@@ -256,7 +268,9 @@ function App() {
         <section id="education" className="section">
           <div className="section-heading reveal">
             <p className="eyebrow">04 / EDUCATION</p>
-            <h2>The road so <span>far.</span></h2>
+            <h2>
+              The road so <span>far.</span>
+            </h2>
           </div>
 
           <div className="timeline">
@@ -264,11 +278,16 @@ function App() {
               <div className="timeline-dot"></div>
 
               <div>
-                <span className="timeline-year">2025 — PRESENT</span>
-                <h3>B.Tech — Computer Science & Engineering</h3>
+                <span className="timeline-year">
+                  2025 — PRESENT
+                </span>
+
+                <h3>KL University</h3>
+
                 <p>
-                  Developing a strong foundation in software engineering,
-                  algorithms, web development and emerging technologies.
+                  Second-year undergraduate student exploring computer
+                  science, software development, artificial intelligence,
+                  and emerging technologies.
                 </p>
               </div>
             </div>
@@ -279,26 +298,42 @@ function App() {
         <section id="certifications" className="section">
           <div className="section-heading reveal">
             <p className="eyebrow">05 / CERTIFICATIONS</p>
-            <h2>Learning never <span>stops.</span></h2>
+            <h2>
+              Learning never <span>stops.</span>
+            </h2>
           </div>
 
           <div className="cert-grid">
             <div className="glass cert-card reveal">
               <span>01</span>
-              <h3>Web Development</h3>
-              <p>Frontend & Full Stack Development</p>
+
+              <h3>Cambridge Certification</h3>
+
+              <p>
+                English language certification and academic achievement.
+              </p>
             </div>
 
             <div className="glass cert-card reveal delay-one">
               <span>02</span>
-              <h3>Git & GitHub</h3>
-              <p>Version Control & Collaboration</p>
+
+              <h3>MOOC Certifications</h3>
+
+              <p>
+                Online learning and technical courses across different
+                areas of technology.
+              </p>
             </div>
 
             <div className="glass cert-card reveal delay-two">
               <span>03</span>
-              <h3>Artificial Intelligence</h3>
-              <p>Machine Learning & AI Fundamentals</p>
+
+              <h3>Hackathon Certificates</h3>
+
+              <p>
+                Participation and achievements through competitive
+                development events.
+              </p>
             </div>
           </div>
         </section>
@@ -319,30 +354,26 @@ function App() {
             </p>
 
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:k.akshithkumar@klh.edu.in"
               className="btn btn-primary contact-button"
             >
               Get In Touch ↗
             </a>
 
             <div className="contact-links">
-              <a href="mailto:your.email@example.com">
-                your.email@example.com
+              <a href="mailto:k.akshithkumar@klh.edu.in">
+                k.akshithkumar@klh.edu.in
               </a>
 
               <a
-                href="https://github.com/"
+                href="https://github.com/xkaimr"
                 target="_blank"
                 rel="noreferrer"
               >
                 GitHub ↗
               </a>
 
-              <a
-                href="https://linkedin.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="#" onClick={(e) => e.preventDefault()}>
                 LinkedIn ↗
               </a>
             </div>
@@ -352,7 +383,7 @@ function App() {
 
       {/* FOOTER */}
       <footer>
-        <span>© 2026 Xkaimr</span>
+        <span>© 2026 K. Akshith</span>
         <span>Designed & Built with curiosity.</span>
       </footer>
     </div>
